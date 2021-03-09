@@ -21,7 +21,7 @@ We have used four baseline methods in total, we will explain the experimental se
   
 **'CES'**: short for the method proposed in the paper 'Boosting Operational DNN Testing Efficiency through Conditioning'. CES is a sampling method for a single model. Since our experiment is for a multi-model scenario, we use the CES method to sample for all models, and then select the best performing subset as the baseline. The best performance here means that we use the sampled subset of the model to measure the spearman coefficients and jaccard coefficients of all model accuracy (35-180) and the final model accuracy, and calculate the mean value of all points, and the largest mean value is regarded as the optimal subset.   
   
-**'RDG'**: RDG is the baseline we used after randomization according to the method proposed in the paper 'DeepGini: Prioritizing Massive Tests to Enhance the Robustness of Deep Neural Networks'. For each sample, we calculated the ξ values of all models, and selected samples according to sampling size, randomly sampled in the first 25%. 
+**'RDG'**: RDG is the baseline we used after randomization according to the method proposed in the paper 'DeepGini: Prioritizing Massive Tests to Enhance the Robustness of Deep Neural Networks'. For each sample, we calculated the maximum/minimum ξ values of all models, and selected samples according to sampling size, randomly sampled in the first 25%. We reported the best of them in the paper. 
   
 **'DDG'**: This is also using the method in the paper 'DeepGini: Prioritizing Massive Tests to Enhance the Robustness of Deep Neural Networks'. But this time we do not perform random sampling, but take the top 180 marks ranked as the test subset. In other words, this is a deterministic sampling method.  
   
