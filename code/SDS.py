@@ -150,7 +150,7 @@ if __name__ == '__main__':
     from keras.models import load_model
 
     model = []
-    model_name = 'model-'
+    model_name = '../models/model-'
     filename = []
     for i in range(1, 26):
         model_name_ = model_name + str(i) + '.h5'
